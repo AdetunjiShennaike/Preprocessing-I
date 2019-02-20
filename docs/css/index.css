@@ -134,7 +134,24 @@ html,
 body {
   height: 100%;
 }
+@mobile (max-width: 500px);
 body {
   background-color: #1e252d;
   background-image: linear-gradient(to bottom, rgba(46, 41, 41, 0.636), #1f1d1d);
+}
+header {
+  color: white;
+  width: 90%;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  color: #eaebec;
+}
+header nav a {
+  margin-left: 4%;
+  border-bottom: 1.5px solid #eaebec;
+  padding-bottom: 100%;
 }

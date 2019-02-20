@@ -58,7 +58,65 @@ html, body {
 }
 
 
+
+
+//colors
+@smokewhite: #eaebec;
+@purewhite: #ffffff;
+@smoggrey: #424242;
+
+ //escape
+@mobile (max-width: 500px);
+
+//variables
+@navcolor: @purewhite;
+@maincolor: @smoggrey;
+
+//mixin
+.custom(@fd, @a, @j) {
+	display: flex;
+	flex-direction: @fd;
+	align-items: @a;
+	justify-content: @j;
+}
+
+
+
 body {
 	background-color: #1e252d;
 	background-image:  linear-gradient(to bottom, rgba(46, 41, 41, 0.636), rgb(31, 29, 29));
+}
+
+header { 
+	color: @smoggrey 
+	width: 90%;
+
+	nav {
+		.custom(row, center, flex-end);
+		color: @smokewhite;
+		margin-bottom: 40px;
+		a {
+			margin-left: 4%;
+			border-bottom: 1.5px solid @smokewhite;
+			padding-bottom: 100%;
+		}
+
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	.me-simple {
+		background-color: @purewhite;
+		padding: 5%;
+		
+		.custom(column, flex-end, center);
+
+		img {
+			height: auto;
+			width: 25%;
+		}
+	}
+	
 }
